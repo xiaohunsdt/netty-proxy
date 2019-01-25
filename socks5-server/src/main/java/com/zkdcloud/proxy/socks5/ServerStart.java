@@ -56,7 +56,7 @@ public class ServerStart {
                                 .addLast(new Socks5ServerEncoder());
                     }
                 });
-        int port = args != null && args.length >= 1 ? Integer.parseInt(args[0]) : 1081;
+        int port = args != null && args.length >= 1 ? Integer.parseInt(args[0]) : 1080;
         logger.info("socks5 server start at : : {}", port);
 
         serverBootstrap.bind(port).sync().channel().closeFuture().sync();

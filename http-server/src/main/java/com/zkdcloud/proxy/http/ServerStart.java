@@ -59,7 +59,7 @@ public class ServerStart {
                                 .addLast("http-init", new JudgeHttpTypeHandler());
                     }
                 });
-        int port = args != null && args.length >= 1 ? Integer.parseInt(args[0]) : 1081;
+        int port = args != null && args.length >= 1 ? Integer.parseInt(args[0]) : 8888;
         logger.info("socks5 server start at : : {}", port);
 
         serverBootstrap.bind(port).sync().channel().closeFuture().sync();
